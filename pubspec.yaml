@@ -1,6 +1,6 @@
 name: SolveRift
-description: "A new Flutter project."
-publish_to: 'none' 
+description: "Mathematical Calculation App"
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -20,6 +20,7 @@ dependencies:
   intl: ^0.18.0
   math_expressions: ^2.1.0
   petitparser: ^5.0.0
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -34,3 +35,6 @@ flutter:
     - family: CustomKeyIcons
       fonts:
         - asset: fonts/CustomKeyIcons.ttf
+
+  assets:
+    - img/logo.png

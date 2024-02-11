@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:math_expressions/math_expressions.dart';
 
+import 'history.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -34,6 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   MathFieldEditingController _mathController = MathFieldEditingController();
   TextEditingController _resultController = TextEditingController();
+  List<String> operationsList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => History(operations: operationsList),
+                ),
+              ),
+            },
             icon: const Icon(Icons.access_time),
           ),
         ],
@@ -66,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   onSubmitted: (String value) {
                     calculateResult(value);
+                    print('Input changed: $value');
                   },
                   autofocus: true,
                 ),
@@ -96,30 +107,33 @@ class _MyHomePageState extends State<MyHomePage> {
   void calculateResult(String expression) {
     try {
       expression = expression.replaceAllMapped(
-        RegExp(r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot'),
+        RegExp(r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}'),
             (Match match) {
           if (match.group(0) == r'\cdot') {
             return '*';
           } else if (match.group(0)!.startsWith(r'\frac')) {
             return '(${match.group(1)})/(${match.group(2)})';
+          } else if (match.group(0)!.startsWith(r'\sqrt')) {
+            return 'sqrt(${match.group(3)})';
           }
           return '';
         },
       );
 
+
       double result = _evaluateMathExpression(expression);
+      String operation = '$expression = $result';
 
       setState(() {
         _resultController.text = 'Result: $result';
+        operationsList.add(operation);
       });
     } catch (e) {
-
       setState(() {
         _resultController.text = 'Errors in calculation';
       });
     }
   }
-
 
   double _evaluateMathExpression(String expression) {
     Parser p = Parser();
@@ -127,5 +141,4 @@ class _MyHomePageState extends State<MyHomePage> {
     double result = exp.evaluate(EvaluationType.REAL, ContextModel());
     return result;
   }
-
 }
