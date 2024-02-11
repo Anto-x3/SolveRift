@@ -1,6 +1,10 @@
+<div align="center">
+
 # SolveRift - App di Calcolo Matematico
 
 ![SolveRift_Logo](img/logo.png)
+
+</div>
 
 ## Descrizione del Progetto
 
