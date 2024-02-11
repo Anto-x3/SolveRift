@@ -1,10 +1,10 @@
 # SolveRift - App di Calcolo Matematico
 
-<img src="img/logo.png" alt="SolveRift_Logo" width="200"/>
+![SolveRift_Logo](img/logo.png)
 
 ## Descrizione del Progetto
 
-SolveRift è un'applicazione Flutter che offre una tastiera matematica interattiva per semplificare l'inserimento e la valutazione di espressioni matematiche. L'app utilizza la libreria `math_expressions` di Dart per calcolare in tempo reale le espressioni inserite dagli utenti.
+SolveRift è un'applicazione Flutter che fornisce una tastiera matematica interattiva per semplificare l'inserimento e la valutazione di espressioni matematiche. L'app utilizza la libreria `math_expressions` di Dart per calcolare in tempo reale le espressioni inserite dagli utenti.
 
 ## Funzionalità Principali
 
@@ -16,8 +16,8 @@ SolveRift è un'applicazione Flutter che offre una tastiera matematica interatti
 ## Tecnologie Utilizzate
 
 - Flutter
-- <a src="https://pub.dev/packages/math_keyboard"> Math_keyboard</a>
-- <a src="https://pub.dev/packages/math_expressions"> Math_expressions</a>
+- [Math_keyboard](https://pub.dev/packages/math_keyboard)
+- [Math_expressions](https://pub.dev/packages/math_expressions)
 
 ## Come Iniziare
 
@@ -33,5 +33,3 @@ Siamo aperti a contributi! Se desideri contribuire, fai una fork del repository 
 ## Segnalazione Bug
 
 Per favore, apri una nuova issue su GitHub se riscontri bug o hai suggerimenti per migliorare l'applicazione.
-
-
