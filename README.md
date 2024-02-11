@@ -23,12 +23,9 @@ SolveRift è un'applicazione Flutter che fornisce una tastiera matematica intera
 - [Math_keyboard](https://pub.dev/packages/math_keyboard)
 - [Math_expressions](https://pub.dev/packages/math_expressions)
 
-## Come Iniziare
+## Link app
 
-1. Assicurati di avere Flutter installato sul tuo sistema.
-2. Clona questo repository: `git clone https://github.com/tuonome/SolveRift.git`
-3. Esegui `flutter pub get` per installare le dipendenze.
-4. Esegui `flutter run` per avviare l'applicazione.
+https://ouo.io/1meZhN
 
 ## Contribuisci
 
