@@ -35,10 +35,9 @@ Il progetto SolveRift utilizza il linguaggio Dart. Assicurati di seguire le rego
 - Aggiungi commenti significativi per spiegare il codice complesso o particolari decisioni di progettazione.
 - Evita commenti ovvi e ridondanti.
   ```dart
-   // Questa funzione calcola il quadrato
-di un numero
+  // Questa funzione calcola il quadrato di un numero
 double calcolaQuadrato(double numero) {
     return numero * numero;
 }
 
-Queste linee guida sono progettate per mantenere la coerenza e la leggibilità nel codice del progetto SolveRift. Assicurati di adattarle alle specifiche esigenze del tuo progetto e alle preferenze del tuo team di sviluppo.
+Queste linee guida sono progettate per mantenere la coerenza e la leggibilità nel codice del progetto SolveRift. Assicurati di adattarle alle specifiche esigenze del tuo progetto e alle preferenze del tuo team di sviluppo. il
