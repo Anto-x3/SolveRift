@@ -15,3 +15,17 @@ Il progetto SolveRift utilizza il linguaggio Dart. Assicurati di seguire le rego
   } else {
       // Altro codice qui
   }
+
+## Lunghezza delle Linee
+- Limita la lunghezza delle linee del codice a 80-120 caratteri.
+- Se una linea è troppo lunga, spezzala in modo logico.
+
+## Nomi delle Variabili
+- Usa nomi di variabili significativi e descrittivi.
+- Usa la notazione camelCase per i nomi delle variabili.
+```dart
+int numeroEaercizi;
+
+## Commenti
+- Aggiungi commenti significativi per spiegare il codice complesso o particolari decisioni di progettazione.
+- Evita commenti ovvi e ridondanti.
