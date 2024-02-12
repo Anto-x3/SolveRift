@@ -40,4 +40,5 @@ double calcolaQuadrato(double numero) {
     return numero * numero;
 }
 
+##
 Queste linee guida sono progettate per mantenere la coerenza e la leggibilità nel codice del progetto SolveRift. Assicurati di adattarle alle specifiche esigenze del tuo progetto e alle preferenze del tuo team di sviluppo. il
