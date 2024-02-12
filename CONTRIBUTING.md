@@ -36,7 +36,7 @@ Grazie per considerare di contribuire a SolveRift! Segui le seguenti linee guida
 
 ## Norme di Stile del Codice
 
-- Utilizza [regole di formattazione e stile](link_a_regole_di_stile) coerenti con il progetto.
+- Utilizza [regole di formattazione e stile](STYLE.MD) coerenti con il progetto.
 - Se possibile, utilizza gli strumenti di formattazione automatica.
 
 ## Documentazione
@@ -47,7 +47,7 @@ Grazie per considerare di contribuire a SolveRift! Segui le seguenti linee guida
 ## Comunicazione
 
 - Utilizza il sistema di issue di GitHub per segnalare problemi o proporre nuove funzionalità.
-- Per discussioni più ampie, puoi utilizzare [canali di comunicazione](link_a_canali_di_comunicazione) specifici.
+- Per discussioni più ampie, puoi partecipare [al server Discord](https://discord.gg/2pMM3scW).
 
 ## Contributi e Riconoscimenti
 
