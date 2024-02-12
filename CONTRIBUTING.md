@@ -36,7 +36,7 @@ Grazie per considerare di contribuire a SolveRift! Segui le seguenti linee guida
 
 ## Norme di Stile del Codice
 
-- Utilizza [regole di formattazione e stile](STYLE.MD) coerenti con il progetto.
+- Utilizza [regole di formattazione e stile](STYLE.md) coerenti con il progetto.
 - Se possibile, utilizza gli strumenti di formattazione automatica.
 
 ## Documentazione
