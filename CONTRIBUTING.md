@@ -2,7 +2,7 @@
 
 # Linee Guida per la Contribuzione a SolveRift
 
-!Contribuisci a SolveRift
+![Contribuisci a SolveRift]
 
 Grazie per considerare di contribuire a SolveRift! Segui le seguenti linee guida per garantire una collaborazione efficace e coerente.
 
