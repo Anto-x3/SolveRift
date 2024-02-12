@@ -19,7 +19,7 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 
 - **Storico delle Operazioni:** Monitora e accedi facilmente alle operazioni passate grazie alla funzione di storico, consentendo agli utenti di rivedere il loro progresso e le soluzioni precedenti.
 
-##Come Funziona
+## Come Funziona
 
 - **Inserisci l'Espressione:** Utilizzando la tastiera matematica integrata, gli utenti possono inserire espressioni complesse e equazioni.
 
