@@ -24,7 +24,7 @@ Il progetto SolveRift utilizza il linguaggio Dart. Assicurati di seguire le rego
 - Usa nomi di variabili significativi e descrittivi.
 - Usa la notazione camelCase per i nomi delle variabili.
   ```dart
-  int numeroEaercizi;
+  int numeroEsercizi;
 
 ## Commenti
 - Aggiungi commenti significativi per spiegare il codice complesso o particolari decisioni di progettazione.
