@@ -22,7 +22,7 @@ Il progetto SolveRift utilizza il linguaggio Dart. Assicurati di seguire le rego
   ```dart
   // Esempio di lunghezza della linea
   String testoLungo =
-    'Questo è un esempio di un testo lungo       che potrebbe superare la lunghezza consigliata, ' +
+    'Questo è un esempio di un testo lungo che potrebbe superare la lunghezza consigliata, ' +
     'quindi è stato spezzato su più linee per mantenerlo leggibile.';
 
 ## Nomi delle Variabili
