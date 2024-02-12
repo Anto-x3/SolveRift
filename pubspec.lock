@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  crypto:
+    dependency: transitive
+    description:
+      name: crypto
+      sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -57,6 +65,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dartx:
+    dependency: "direct main"
+    description:
+      name: dartx
+      sha256: "8b25435617027257d43e6508b5fe061012880ddfdaa75a71d607c3de2a13d244"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  equations:
+    dependency: "direct main"
+    description:
+      name: equations
+      sha256: ae30e977d601e19aa1fc3409736c5eac01559d1d653a4c30141fbc4e86aa605c
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -104,6 +128,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fraction:
+    dependency: transitive
+    description:
+      name: fraction
+      sha256: "09e9504c9177bbd77df56e5d147abfbb3b43360e64bf61510059c14d6a82d524"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
   holding_gesture:
     dependency: "direct main"
     description:
@@ -285,6 +317,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.1"
+  time:
+    dependency: transitive
+    description:
+      name: time
+      sha256: ad8e018a6c9db36cb917a031853a1aae49467a93e0d464683e029537d848c221
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
   tuple:
     dependency: transitive
     description:

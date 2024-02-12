@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void calculateResult(String expression) {
     try {
       expression = expression.replaceAllMapped(
-        RegExp(r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}'),
+        RegExp(r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}|\\sin^{-1}\(([^)]+)\)|\\cos\^{-1}\(([^)]+)\)|\\tan\^{-1}\(([^)]+)\)|\\sin\(([^)]+)\)|\\cos\(([^)]+)\)|\\tan\(([^)]+)\)|\\ln\(([^)]+)\)'),
             (Match match) {
           if (match.group(0) == r'\cdot') {
             return '*';
@@ -115,11 +115,25 @@ class _MyHomePageState extends State<MyHomePage> {
             return '(${match.group(1)})/(${match.group(2)})';
           } else if (match.group(0)!.startsWith(r'\sqrt')) {
             return 'sqrt(${match.group(3)})';
+          } else if (match.group(0)!.startsWith(r'\sin^{-1}')) {
+          } else if (match.group(0)!.startsWith(r'\sin^{-1}')) {
+            return 'asin(${match.group(4)})';
+          } else if (match.group(0)!.startsWith(r'\cos^{-1}')) {
+            return 'acos(${match.group(4)})';
+          } else if (match.group(0)!.startsWith(r'\tan^{-1}')) {
+            return 'atan(${match.group(4)})';
+          } else if (match.group(0)!.startsWith(r'\sin')) {
+            return 'sin(${match.group(7)})';
+          } else if (match.group(0)!.startsWith(r'\cos')) {
+            return 'cos(${match.group(8)})';
+          } else if (match.group(0)!.startsWith(r'\tan')) {
+            return 'tan(${match.group(9)})';
+          } else if (match.group(0)!.startsWith(r'\ln')) {
+            return 'log(e, ${match.group(10)})';
           }
           return '';
         },
       );
-
 
       double result = _evaluateMathExpression(expression);
       String operation = '$expression = $result';

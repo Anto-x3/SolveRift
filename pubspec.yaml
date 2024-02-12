@@ -21,6 +21,8 @@ dependencies:
   math_expressions: ^2.1.0
   petitparser: ^5.0.0
   http: ^1.2.0
+  equations: ^5.0.2
+  dartx: ^1.2.0
 
 dev_dependencies:
   flutter_test:
