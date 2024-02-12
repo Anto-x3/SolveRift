@@ -23,7 +23,7 @@ SolveRift è un'applicazione Flutter che fornisce una tastiera matematica intera
 - [Math_keyboard](https://pub.dev/packages/math_keyboard)
 - [Math_expressions](https://pub.dev/packages/math_expressions)
 
-## Link app
+## Link App
 
 Android:
 - [SolveRift_DEMO](https://ouo.io/NwAg7sg)
