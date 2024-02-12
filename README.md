@@ -38,7 +38,7 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 
 ## Contribuisci
 
-Siamo aperti a contributi! Se desideri contribuire, fai una fork del repository e invia una pull request. Assicurati di seguire le linee guida di contribuzione.
+Siamo aperti a contributi! Se desideri contribuire, fai una fork del repository e invia una pull request. Assicurati di seguire [le linee guida di contribuzione](CONTRIBUTING.md).
 
 ## Segnalazione Bug
 
