@@ -24,7 +24,7 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 
 - **Inserisci l'Espressione:** Utilizzando la tastiera matematica integrata, gli utenti possono inserire espressioni complesse e equazioni.
 
-- **Fai una Foto:** Se preferisci, puoi scattare una foto all'equazione direttamente dal libro utilizzando le librerie integrate. SolveRift scannerizza l'immagine e interpreta l'equazione per semplificare l'inserimento.
+- **Acquisizione tramite Fotocamera:** Se lo desideri, hai la possibilità di scattare una fotografia direttamente dall'applicazione utilizzando il pulsante con l'icona della fotocamera posizionato in basso a destra. SolveRift procederà quindi a scannerizzare l'immagine e interpretare l'equazione, semplificando così il processo di inserimento.
   
 - **Guida Passo dopo Passo:** SolveRift assiste gli utenti nella risoluzione, fornendo feedback in tempo reale durante l'inserimento e guidando attraverso ogni passo.
 
