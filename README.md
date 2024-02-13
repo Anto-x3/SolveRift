@@ -40,7 +40,7 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 
 ## Link App
 
-- [SolveRift DEMO su Android](https://ouo.io/NwAg7sg)
+- [SolveRift DEMO su Android](https://ouo.io/Qsk93K)
 
 ## Contribuisci
 
