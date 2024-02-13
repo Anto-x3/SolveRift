@@ -10,24 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
   math_keyboard: ^0.2.1
-  flutter_localizations:
-    sdk: flutter
-  flutter_math_fork: ^0.7.1
-  holding_gesture: ^1.1.0
-  intl: ^0.18.0
-  math_expressions: ^2.1.0
-  petitparser: ^5.0.0
-  http: ^1.2.0
-  equations: ^5.0.2
-  dartx: ^1.2.0
+  image_picker: ^1.0.7
+  image_cropper: ^5.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^3.0.1
   pedantic: ^1.11.0
 

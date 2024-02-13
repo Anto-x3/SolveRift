@@ -1,8 +1,15 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:math_keyboard/math_keyboard.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:image_cropper/image_cropper.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 
 import 'history.dart';
+import 'keyboard/custom_keyboard_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,9 +41,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  MathFieldEditingController _mathController = MathFieldEditingController();
   TextEditingController _resultController = TextEditingController();
+  MathFieldEditingController _mathController = MathFieldEditingController();
   List<String> operationsList = [];
+  XFile? _image;
 
   @override
   Widget build(BuildContext context) {
@@ -47,76 +55,86 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () => {
+            onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => History(operations: operationsList),
                 ),
-              ),
+              );
             },
             icon: const Icon(Icons.access_time),
           ),
         ],
-        toolbarHeight: 160.0,
+        toolbarHeight: 110.0,
       ),
       backgroundColor: Color(0xFFecf0f1),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: Container(
-              child: Center(
-                child: MathField(
-                  controller: _mathController,
-                  keyboardType: MathKeyboardType.expression,
-                  variables: const ['x', 'y', 'z'],
-                  decoration: const InputDecoration(),
-                  onChanged: (String value) {
-                    print('Input changed: $value');
-                  },
-                  onSubmitted: (String value) {
-                    calculateResult(value);
-                    print('Input changed: $value');
-                  },
-                  autofocus: true,
-                ),
-              ),
+          SizedBox(height: 16),
+          if (_image != null) Image.file(File(_image!.path)),
+          SizedBox(height: 16),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: MathField(
+              controller: _mathController,
+              keyboardType: MathKeyboardType.expression,
+              variables: const ['x', 'y', 'z'],
+              decoration: const InputDecoration(),
+              onChanged: (String value) {
+                print('Input changed: $value');
+              },
+              onSubmitted: (String value) {
+                calculateResult(value);
+                print('Input changed: $value');
+              },
+              autofocus: true,
             ),
           ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Color(0xFFecf0f1),
-              child: Center(
-                child: Text(
-                  _resultController.text,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.black,
-                  ),
+          SizedBox(height: 90),
+          Container(
+            color: Color(0xFFecf0f1),
+            child: Center(
+              child: Math.tex(
+                _resultController.text,
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  color: Colors.black,
                 ),
               ),
             ),
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _openCamera();
+        },
+        tooltip: 'Open Camera',
+        child: Icon(Icons.camera_alt),
+        backgroundColor: Colors.blue,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 
   void calculateResult(String expression) {
     try {
       expression = expression.replaceAllMapped(
-        RegExp(r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}|\\sin^{-1}\(([^)]+)\)|\\cos\^{-1}\(([^)]+)\)|\\tan\^{-1}\(([^)]+)\)|\\sin\(([^)]+)\)|\\cos\(([^)]+)\)|\\tan\(([^)]+)\)|\\ln\(([^)]+)\)'),
-            (Match match) {
+        RegExp(
+          r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}|\\sin^{-1}\(([^)]+)\)|\\cos\^{-1}\(([^)]+)\)|\\tan\^{-1}\(([^)]+)\)|\\sin\(([^)]+)\)|\\cos\(([^)]+)\)|\\tan\(([^)]+)\)|\\ln\(([^)]+)\)',
+        ),
+        (Match match) {
           if (match.group(0) == r'\cdot') {
             return '*';
           } else if (match.group(0)!.startsWith(r'\frac')) {
             return '(${match.group(1)})/(${match.group(2)})';
           } else if (match.group(0)!.startsWith(r'\sqrt')) {
             return 'sqrt(${match.group(3)})';
-          } else if (match.group(0)!.startsWith(r'\sin^{-1}')) {
-          } else if (match.group(0)!.startsWith(r'\sin^{-1}')) {
+          } else if (match.group(0)!.startsWith(r'\sin^{-1}(')) {
             return 'asin(${match.group(4)})';
           } else if (match.group(0)!.startsWith(r'\cos^{-1}')) {
             return 'acos(${match.group(4)})';
@@ -154,5 +172,39 @@ class _MyHomePageState extends State<MyHomePage> {
     Expression exp = p.parse(expression);
     double result = exp.evaluate(EvaluationType.REAL, ContextModel());
     return result;
+  }
+
+  void _openCamera() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.camera);
+
+    if (image != null) {
+      ImageCropper cropper = ImageCropper();
+      final croppedImage = await cropper.cropImage(
+        sourcePath: image.path,
+        aspectRatioPresets: [
+          CropAspectRatioPreset.square,
+          CropAspectRatioPreset.ratio3x2,
+          CropAspectRatioPreset.original,
+          CropAspectRatioPreset.ratio4x3,
+          CropAspectRatioPreset.ratio16x9
+        ],
+        uiSettings: [
+          AndroidUiSettings(
+              toolbarTitle: 'Edit Photo',
+              toolbarColor: Color(0xFF3498db),
+              toolbarWidgetColor: Colors.white,
+              initAspectRatio: CropAspectRatioPreset.original,
+              lockAspectRatio: false),
+          IOSUiSettings(
+            title: 'Edit Photor',
+          ),
+        ],
+      );
+
+      setState(() {
+        _image = croppedImage != null ? XFile(croppedImage.path) : null;
+      });
+    }
   }
 }
