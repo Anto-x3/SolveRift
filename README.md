@@ -31,6 +31,8 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 - Flutter
 - [Math_keyboard](https://pub.dev/packages/math_keyboard)
 - [Math_expressions](https://pub.dev/packages/math_expressions)
+- [Image_picker](https://pub.dev/packages/image_picker)
+- [Image_cropper](https://pub.dev/packages/image_cropper)
 
 ## Link App
 
