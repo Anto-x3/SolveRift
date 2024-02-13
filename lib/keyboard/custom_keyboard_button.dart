@@ -273,4 +273,4 @@ final numberKeyboard = [
     NextButtonConfig(),
     SubmitButtonConfig(),
   ],
-];
+]
