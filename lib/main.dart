@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
               initAspectRatio: CropAspectRatioPreset.original,
               lockAspectRatio: false),
           IOSUiSettings(
-            title: 'Edit Photor',
+            title: 'Edit Photo',
           ),
         ],
       );
