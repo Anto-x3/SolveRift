@@ -2,14 +2,15 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:math_keyboard/math_keyboard.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'package:math_keyboard/math_keyboard.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:app_settings/app_settings.dart';
 
 import 'history.dart';
-import 'keyboard/custom_keyboard_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF3498db),
-        title: Text(widget.title),
         centerTitle: true,
         actions: [
           IconButton(
@@ -67,6 +67,55 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         toolbarHeight: 110.0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'img/title_appbar.png',
+                width: 200,
+                height: 200,
+              ),
+            ),
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFF3498db),
+              ),
+              child: Center(
+                child: Image.asset(
+                  'img/logo_appbar.png',
+                  width: 550,
+                  height: 550,
+                    fit: BoxFit.cover
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text('Help center'),
+              onTap: () {
+                //
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.info),
+              title: Text('About us'),
+              onTap: () {},
+            ),
+            Spacer(),
+            Divider(),
+            ListTile(
+              title: Text('© Copyright by SolveRift 2024'),
+            ),
+          ],
+        ),
       ),
       backgroundColor: Color(0xFFecf0f1),
       body: Column(
@@ -110,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
+        onPressed: () async {
           _openCamera();
         },
         tooltip: 'Open Camera',
@@ -121,13 +170,25 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  double _evaluateMathExpression(String expression) {
+    Parser p = Parser();
+    Expression exp = p.parse(expression);
+    double result = exp.evaluate(EvaluationType.REAL, ContextModel());
+
+    if ((result - result.toInt()).abs() < 1e-12) {
+      return result.toInt().toDouble();
+    }
+
+    return result;
+  }
+
   void calculateResult(String expression) {
     try {
       expression = expression.replaceAllMapped(
         RegExp(
           r'\\frac{([^{}]+)}{([^{}]+)}|\\cdot|\\sqrt{([^{}]+)}|\\sin^{-1}\(([^)]+)\)|\\cos\^{-1}\(([^)]+)\)|\\tan\^{-1}\(([^)]+)\)|\\sin\(([^)]+)\)|\\cos\(([^)]+)\)|\\tan\(([^)]+)\)|\\ln\(([^)]+)\)',
         ),
-        (Match match) {
+            (Match match) {
           if (match.group(0) == r'\cdot') {
             return '*';
           } else if (match.group(0)!.startsWith(r'\frac')) {
@@ -154,10 +215,12 @@ class _MyHomePageState extends State<MyHomePage> {
       );
 
       double result = _evaluateMathExpression(expression);
-      String operation = '$expression = $result';
+      String formattedResult = _formatResult(result);
+
+      String operation = '$expression = $formattedResult';
 
       setState(() {
-        _resultController.text = 'Result: $result';
+        _resultController.text = 'Result: $formattedResult';
         operationsList.add(operation);
       });
     } catch (e) {
@@ -167,11 +230,12 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  double _evaluateMathExpression(String expression) {
-    Parser p = Parser();
-    Expression exp = p.parse(expression);
-    double result = exp.evaluate(EvaluationType.REAL, ContextModel());
-    return result;
+  String _formatResult(double result) {
+    if ((result - result.toInt()).abs() < 1e-12) {
+      return result.toInt().toString();
+    }
+
+    return result.toStringAsFixed(5).replaceAll(RegExp(r'0*$'), '').replaceAll(RegExp(r'\.$'), '');
   }
 
   void _openCamera() async {
@@ -195,9 +259,10 @@ class _MyHomePageState extends State<MyHomePage> {
               toolbarColor: Color(0xFF3498db),
               toolbarWidgetColor: Colors.white,
               initAspectRatio: CropAspectRatioPreset.original,
-              lockAspectRatio: false),
+              lockAspectRatio: false
+          ),
           IOSUiSettings(
-            title: 'Edit Photor',
+            title: 'Edit Photo',
           ),
         ],
       );

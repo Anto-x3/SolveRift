@@ -2,7 +2,7 @@ name: SolveRift
 description: "Mathematical Calculation App"
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 0.0.1
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
@@ -10,10 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.6
   math_keyboard: ^0.2.1
   image_picker: ^1.0.7
   image_cropper: ^5.0.1
+  permission_handler: ^11.3.0
+  app_settings: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -30,3 +32,5 @@ flutter:
 
   assets:
     - img/logo.png
+    - img/logo_appbar.png
+    - img/title_appbar.png
