@@ -18,10 +18,14 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 
 - **Storico delle Operazioni:** Monitora e accedi facilmente alle operazioni passate grazie alla funzione di storico, consentendo agli utenti di rivedere il loro progresso e le soluzioni precedenti.
 
+- **Scanner Equazioni da Foto:** Ora è possibile scattare una foto all'equazione direttamente dal libro utilizzando le librerie integrate. SolveRift scannerizza l'immagine e interpreta l'equazione per semplificare l'inserimento.
+
 ## Come Funziona
 
 - **Inserisci l'Espressione:** Utilizzando la tastiera matematica integrata, gli utenti possono inserire espressioni complesse e equazioni.
 
+- **Acquisizione tramite Fotocamera:** Se lo desideri, hai la possibilità di scattare una fotografia direttamente dall'applicazione utilizzando il pulsante con l'icona della fotocamera posizionato in basso a destra. SolveRift procederà quindi a scannerizzare l'immagine e interpretare l'equazione, semplificando così il processo di inserimento.
+  
 - **Guida Passo dopo Passo:** SolveRift assiste gli utenti nella risoluzione, fornendo feedback in tempo reale durante l'inserimento e guidando attraverso ogni passo.
 
 - **Storico delle Operazioni:** Mantieni traccia delle tue operazioni passate e risultati, rendendo l'app uno strumento utile per l'apprendimento continuo.
@@ -31,10 +35,12 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 - Flutter
 - [Math_keyboard](https://pub.dev/packages/math_keyboard)
 - [Math_expressions](https://pub.dev/packages/math_expressions)
+- [Image_picker](https://pub.dev/packages/image_picker)
+- [Image_cropper](https://pub.dev/packages/image_cropper)
 
 ## Link App
 
-- [SolveRift DEMO su Android](https://ouo.io/NwAg7sg)
+- [SolveRift DEMO su Android](https://ouo.io/Qsk93K)
 
 ## Contribuisci
 
