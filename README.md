@@ -2,7 +2,7 @@
 
 # SolveRift - App di Calcolo Matematico
 
-![SolveRift Logo](img/logo.png)
+![SolveRift Logo](img/logo_readme.png)
 
 </div>
 
