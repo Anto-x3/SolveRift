@@ -1,58 +1,58 @@
 <div align="center">
 
-# Linee Guida per la Contribuzione a SolveRift
+# Contribution Guidelines for SolveRift
 
-Grazie per considerare di contribuire a SolveRift! Segui le seguenti linee guida per garantire una collaborazione efficace e coerente.
+Thank you for considering contributing to SolveRift! Follow the guidelines below to ensure effective and consistent collaboration.
 
-## Processo di Contribuzione
+## Contribution Process
 
-1. **Fork del Repository:**
-   - Fai il fork del repository SolveRift sul tuo account GitHub.
+1. **Fork the Repository:**
+   - Fork the SolveRift repository to your GitHub account.
 
-2. **Clona il Repository:**
-   - Clona il repository forkato in locale sul tuo computer.
+2. **Clone the Repository:**
+   - Clone the forked repository locally on your computer.
 
-3. **Branch di Lavoro:**
-   - Crea un nuovo branch per ogni funzionalità o correzione di bug che intendi implementare.
+3. **Working Branch:**
+   - Create a new branch for each feature or bug fix you plan to implement.
 
-4. **Codice Pulito:**
-   - Rispetta le norme di stile del codice definite nel progetto.
-   - Mantieni il codice chiaro e leggibile.
+4. **Clean Code:**
+   - Adhere to the code style guidelines defined in the project.
+   - Keep the code clear and readable.
 
-5. **Test Locali:**
-   - Assicurati che il tuo codice sia accompagnato da test appropriati.
-   - Esegui i test localmente per verificare che tutto funzioni correttamente.
+5. **Local Testing:**
+   - Ensure your code is accompanied by appropriate tests.
+   - Run tests locally to verify everything works correctly.
 
-6. **Push e Pull Request:**
-   - Effettua il push del tuo branch nel tuo repository forkato.
-   - Invia una pull request al branch principale di SolveRift.
+6. **Push and Pull Request:**
+   - Push your branch to your forked repository.
+   - Submit a pull request to the SolveRift main branch.
 
-7. **Revisione del Codice:**
-   - I membri del team esamineranno la tua pull request.
-   - Effettueranno eventuali correzioni o suggeriranno modifiche se necessario.
+7. **Code Review:**
+   - Team members will review your pull request.
+   - They may make corrections or suggest changes if necessary.
 
-8. **Fusione della Pull Request:**
-   - Una volta approvata, la tua pull request sarà fusa nel branch principale di SolveRift.
+8. **Pull Request Merge:**
+   - Once approved, your pull request will be merged into the SolveRift main branch.
 
-## Norme di Stile del Codice
+## Code Style Guidelines
 
-- Utilizza [regole di formattazione e stile](STYLE.md) coerenti con il progetto.
-- Se possibile, utilizza gli strumenti di formattazione automatica.
+- Use [consistent formatting and style rules](STYLE.md) aligned with the project.
+- If possible, utilize automatic formatting tools.
 
-## Documentazione
+## Documentation
 
-- Documenta il codice in modo chiaro e conciso.
-- Aggiorna la documentazione esistente se necessario.
+- Document the code clearly and concisely.
+- Update existing documentation as needed.
 
-## Comunicazione
+## Communication
 
-- Utilizza il sistema di issue di GitHub per segnalare problemi o proporre nuove funzionalità.
-- Per discussioni più ampie, puoi partecipare [al server Discord](https://discord.gg/2pMM3scW).
+- Use GitHub's issue system to report issues or propose new features.
+- For broader discussions, you can join [the Discord server](https://discord.gg/2pMM3scW).
 
-## Contributi e Riconoscimenti
+## Contributions and Acknowledgments
 
-- Tutti i contributori saranno menzionati nei crediti dell'applicazione.
+- All contributors will be credited in the application's acknowledgments.
 
-Siamo entusiasti di accogliere nuovi contributori e apprezziamo il vostro impegno verso il miglioramento di SolveRift! Grazie per il tuo contributo!
+We are excited to welcome new contributors and appreciate your commitment to improving SolveRift! Thank you for your contribution!
 
 </div>
