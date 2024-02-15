@@ -1,36 +1,36 @@
 <div align="center">
 
-# SolveRift - App di Calcolo Matematico
+# SolveRift - Mathematical Calculation App
 
 ![SolveRift Logo](img/logo_readme.png)
 
 </div>
 
-## Descrizione del Progetto
+## Project Description
 
-SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flutter, concepita per semplificare il calcolo matematico. Mirando ad assistere coloro che hanno difficoltà in matematica, SolveRift offre una soluzione intuitiva per esercizi, guidando gli utenti passo dopo passo nella loro risoluzione.
+SolveRift is a mobile application written in Dart using the Flutter framework, designed to simplify mathematical calculations. Aimed at assisting those struggling with math, SolveRift provides an intuitive solution for exercises, guiding users step by step through their resolution.
 
-## Caratteristiche Principali
+## Key Features
 
-- **Interfaccia Intuitiva:** SolveRift presenta un'interfaccia utente semplice e accattivante, rendendo il calcolo matematico su dispositivi mobili un'esperienza piacevole.
+- **Intuitive Interface:** SolveRift features a simple and engaging user interface, making mathematical calculations on mobile devices a pleasant experience.
 
-- **MathField:** Con l'utilizzo del pacchetto Flutter MathField, gli utenti possono inserire espressioni matematiche in modo agevole e visuale, mentre SolveRift fornisce un feedback istantaneo.
+- **MathField:** With the use of the Flutter MathField package, users can input mathematical expressions easily and visually, while SolveRift provides instant feedback.
 
-- **Storico delle Operazioni:** Monitora e accedi facilmente alle operazioni passate grazie alla funzione di storico, consentendo agli utenti di rivedere il loro progresso e le soluzioni precedenti.
+- **Operation History:** Easily monitor and access past operations with the history function, allowing users to review their progress and previous solutions.
 
-- **Scanner Equazioni da Foto:** Ora è possibile scattare una foto all'equazione direttamente dal libro utilizzando le librerie integrate. SolveRift scannerizza l'immagine e interpreta l'equazione per semplificare l'inserimento.
+- **Equation Scanner from Photo:** Now you can take a photo of the equation directly from the book using the integrated libraries. SolveRift scans the image and interprets the equation to simplify the input.
 
-## Come Funziona
+## How It Works
 
-- **Inserisci l'Espressione:** Utilizzando la tastiera matematica integrata, gli utenti possono inserire espressioni complesse e equazioni.
+- **Enter the Expression:** Using the integrated mathematical keyboard, users can input complex expressions and equations.
 
-- **Acquisizione tramite Fotocamera:** Se lo desideri, hai la possibilità di scattare una fotografia direttamente dall'applicazione utilizzando il pulsante con l'icona della fotocamera posizionato in basso a destra. SolveRift procederà quindi a scannerizzare l'immagine e interpretare l'equazione, semplificando così il processo di inserimento.
-  
-- **Guida Passo dopo Passo:** SolveRift assiste gli utenti nella risoluzione, fornendo feedback in tempo reale durante l'inserimento e guidando attraverso ogni passo.
+- **Camera Capture:** If desired, you have the option to take a photo directly from the application using the camera icon button at the bottom right. SolveRift will then scan the image and interpret the equation, simplifying the input process.
 
-- **Storico delle Operazioni:** Mantieni traccia delle tue operazioni passate e risultati, rendendo l'app uno strumento utile per l'apprendimento continuo.
+- **Step-by-Step Guidance:** SolveRift assists users in resolution, providing real-time feedback during input and guiding through each step.
 
-## Tecnologie Utilizzate
+- **Operation History:** Keep track of your past operations and results, making the app a useful tool for continuous learning.
+
+## Technologies Used
 
 - Flutter
 - [Math_keyboard](https://pub.dev/packages/math_keyboard)
@@ -38,14 +38,14 @@ SolveRift è un'applicazione mobile scritta in Dart utilizzando il framework Flu
 - [Image_picker](https://pub.dev/packages/image_picker)
 - [Image_cropper](https://pub.dev/packages/image_cropper)
 
-## Link App
+## App Link
 
-- [SolveRift DEMO su Android](https://ouo.io/hB8SJP3)
+- [SolveRift DEMO on Android](https://ouo.io/hB8SJP3)
 
-## Contribuisci
+## Contribute
 
-Siamo aperti a contributi! Se desideri contribuire, fai una fork del repository e invia una pull request. Assicurati di seguire [le linee guida di contribuzione](CONTRIBUTING.md).
+We welcome contributions! If you'd like to contribute, fork the repository and submit a pull request. Make sure to follow [the contribution guidelines](CONTRIBUTING.md).
 
-## Segnalazione Bug
+## Bug Reporting
 
-Per favore, apri una nuova issue su GitHub se riscontri bug o hai suggerimenti per migliorare l'applicazione.
+Please open a new issue on GitHub if you encounter bugs or have suggestions to improve the application.
