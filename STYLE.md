@@ -1,39 +1,39 @@
-# Linee Guida per la Formattazione e lo Stile del Codice
+# Code Formatting and Style Guidelines
 
-## Linguaggio di Programmazione
-Il progetto SolveRift utilizza il linguaggio Dart. Assicurati di seguire le regole di formattazione e stile specifiche per il linguaggio.
+## Programming Language
+The SolveRift project uses the Dart programming language. Make sure to follow the specific formatting and style rules for the language.
 
-## Indentazione
-- Usa quattro spazi per l'indentazione.
-- Evita l'uso di tabulazioni.
+## Indentation
+- Use four spaces for indentation.
+- Avoid the use of tabs.
 
-## Parentesizzazione
-- Posiziona le parentesi graffe sulla stessa linea dell'istruzione di controllo.
+## Parentheses
+- Place curly braces on the same line as the control statement.
   ```dart
-  if (condizione) {
-      // Codice qui
+  if (condition) {
+      // Code here
   } else {
-      // Altro codice qui
+      // Other code here
   }
 
-## Lunghezza delle Linee
-- Limita la lunghezza delle linee del codice a 80-120 caratteri.
-- Se una linea è troppo lunga, spezzala in modo logico.
+## Line Length
+- Limit code line length to 80-120 characters.
+- If a line is too long, break it logically.
   ```dart
-  // Esempio di lunghezza della linea
-  String testoLungo =
-    'Questo è un esempio di un testo lungo che potrebbe superare la lunghezza consigliata, ' +
-    'quindi è stato spezzato su più linee per mantenerlo leggibile.';
+  // Line length example
+  String longText =
+    'This is an example of a long text that might exceed the recommended length, ' +
+    'so it has been broken into multiple lines to keep it readable.';
 
-## Nomi delle Variabili
-- Usa nomi di variabili significativi e descrittivi.
-- Usa la notazione camelCase per i nomi delle variabili.
+## Variable Names
+- Use meaningful and descriptive variable names.
+- Use camelCase notation for variable names.
   ```dart
-  int numeroEsercizi;
+  int exerciseNumber;
 
-## Commenti
-- Aggiungi commenti significativi per spiegare il codice complesso o particolari decisioni di progettazione.
-- Evita commenti ovvi e ridondanti.
+## Comments
+- Add meaningful comments to explain complex code or specific design decisions.
+- Avoid obvious and redundant comments.
 
 ##
-Queste linee guida sono progettate per mantenere la coerenza e la leggibilità nel codice del progetto SolveRift. Assicurati di adattarle alle specifiche esigenze del tuo progetto e alle preferenze del tuo team di sviluppo. 
+These guidelines are designed to maintain consistency and readability in the SolveRift project's code. Make sure to adapt them to the specific needs of your project and the preferences of your development team.
